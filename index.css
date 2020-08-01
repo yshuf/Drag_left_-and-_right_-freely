@@ -1,0 +1,32 @@
+html,
+body,
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.gf_s {
+    float: left;
+    width: 4px;
+    cursor: e-resize;
+    background-color: #fff;
+    border: #99BBE8 1px solid;
+}
+
+.gf_s_g {
+    float: left;
+    width: 4px;
+    display: none;
+    cursor: e-resize;
+    position: absolute;
+    background-color: #F0F0F0;
+    border: #99BBE8 1px solid;
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+    z-index: 1000;
+}
