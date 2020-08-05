@@ -10,13 +10,13 @@
 	</head>
 
 	<body>
-		<div id="divP" style="width: 100%; height: 100%; position: relative;">
+		<div id="divP" style="width: 100%; height: 100%;">
 			<div
 				id="divLeft"
-				style="background-color: green; float: left; min-width: 500px;"
+				style="background-color: green; float: left;"
 			></div>
-			<div id="divS" class="gf_s"></div>
-			<div id="divSG" class="gf_s_g"></div>
+			<div id="divS" class="gf_s" style="float: left;"></div>
+			<div id="divSG" class="gf_s_g" style="float: left;"></div>
 			<div
 				id="divRight"
 				style="background-color: blue; float: left;"
@@ -30,7 +30,9 @@
 					left: mousePosition(e).x - 2,
 					display: 'block',
 				})
-
+			}
+			//完成分隔条左右拖动(mouseup)
+			function sliderHorizontalMove(e) {
 				var lWidth = getElCoordinate(jQuery('#divSG')[0]).left - 2
 
 				var rWidth = jQuery(window).width() - lWidth - 6
@@ -38,8 +40,6 @@
 				jQuery('#divRight').css('width', rWidth + 'px')
 				jQuery('#divSG').css('display', 'none')
 			}
-			//完成分隔条左右拖动(mouseup)
-			function sliderHorizontalMove(e) {}
 
 			function reInitSize() {
 				var width = jQuery(window).width() - 6
